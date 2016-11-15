@@ -32,10 +32,10 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    cv::Mat image=cv::imread("/home/frav/Imágenes/sky360_skydome.png");
+    cv::Mat image=cv::imread("image.png");
 
     Roi_selector roi_selector;
-    roi_selector.show_image("FONDO", image);
+    roi_selector.show_image("Roi Selector", image);
     roi_selector.show();
 
     a.exec();
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     std::cout<<"ROI="<<roi<<std::endl;
 
     Draw_image draw_image;
-    draw_image.show_image("FONDO", image);
+    draw_image.show_image("Draw Image", image);
     draw_image.show();
 
     a.exec();
@@ -53,13 +53,13 @@ int main(int argc, char *argv[])
     cv::Mat mask;
     draw_image.get_mask(mask);
     Qt_imshow imshow;
-    imshow.show_image("MASCARA", mask);
+    imshow.show_image("Mask", mask);
     imshow.show();
 
     a.exec();
 
     Draw_path draw_path;
-    draw_path.show_image("PATH",image);
+    draw_path.show_image("Draw Path",image);
     draw_path.show();
 
     a.exec();
