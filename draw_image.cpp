@@ -2,7 +2,7 @@
 *
 * Copyright 2016 Ignacio San Roman Lana
 *
-* This file is part of Camera_Reader
+* This file is part of qt_opencv_imshow_tools
 *
 * qt_opencv_imshow_tools is free software: you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
